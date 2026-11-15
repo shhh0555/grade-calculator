@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>學期成績試算</title>
+<meta name="description" content="輸入各科評分比例和成績，算出預估平均、還要考幾分，以及停修划不划算。">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="#/">學期成績試算</a>
+      <a class="site-header__link" href="#/about">使用說明</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="progress"></div>
+    <div id="view"></div>
+  </main>
+
+  <footer class="site-footer">
+    本站試算結果僅供參考，請以學校規定和授課老師說明為準。資料只存在你的瀏覽器。
+  </footer>
+
+  <!-- 用一般 script（非 module），雙擊 index.html 就能直接打開；順序不能亂 -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/calc.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/components/progress-bar.js"></script>
+  <script src="js/components/kpi-card.js"></script>
+  <script src="js/components/status-tag.js"></script>
+  <script src="js/components/course-card.js"></script>
+  <script src="js/steps/welcome.js"></script>
+  <script src="js/steps/setup.js"></script>
+  <script src="js/steps/courses.js"></script>
+  <script src="js/steps/items.js"></script>
+  <script src="js/steps/result.js"></script>
+  <script src="js/steps/about.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
