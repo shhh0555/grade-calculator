@@ -1,0 +1,104 @@
+/* 頁面版型：頁首、主要容器、進度條、步驟標題與底部按鈕 */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+}
+.site-header__inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.site-header__brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.site-header__link { font-size: 14px; color: var(--sub); text-decoration: none; }
+.site-header__link:hover { color: var(--ink); }
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.site-footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  color: var(--sub);
+  font-size: 12px;
+}
+
+/* 進度條 */
+.progress {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.progress__step {
+  border-top: 3px solid var(--line);
+  padding-top: 8px;
+  font-size: 13px;
+  color: var(--sub);
+}
+.progress__step a,
+.progress__step span { color: inherit; text-decoration: none; display: block; }
+.progress__step--done { border-color: var(--accent); }
+.progress__step--done a:hover { color: var(--ink); }
+.progress__step--current { border-color: var(--accent); color: var(--ink); font-weight: 600; }
+.progress__no { font-variant-numeric: tabular-nums; margin-right: 4px; }
+
+/* 步驟標題 */
+.step-head { margin-bottom: 20px; }
+.step-head__eyebrow { margin: 0 0 4px; font-size: 12px; color: var(--sub); letter-spacing: .04em; }
+
+/* 底部上一步／下一步 */
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.step-nav__group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.stack > * + * { margin-top: 12px; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px 16px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 12px;
+}
+
+/* 歡迎頁 */
+.hero { max-width: 620px; padding: 32px 0 8px; }
+.hero__title { font-size: 28px; margin-bottom: 12px; }
+.hero__lead { font-size: 16px; margin: 0 0 16px; }
+.hero__points { color: var(--sub); padding-left: 20px; margin: 0 0 24px; }
+.hero__points li { margin: 4px 0; }
+
+@media (max-width: 520px) {
+  .progress__label { display: none; }
+  .progress__step--current .progress__label { display: inline; }
+  .progress { grid-template-columns: repeat(4, auto); }
+}
